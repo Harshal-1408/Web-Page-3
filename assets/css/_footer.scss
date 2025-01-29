@@ -1,0 +1,241 @@
+@import 'font';
+@import 'color';
+@import 'media-queries';
+
+
+.footer {
+    background-color: $white;
+    margin: 64px;
+    @include mobile_s{
+        margin: 16px 0;
+    }
+    @include mobile_m_l{
+        margin: 16px 0;
+    }
+    @include tablet_s{
+        margin: 16px 0;
+    }
+    @include tablet_l{
+        margin: 16px 0;
+    }
+    @include laptop_m{
+        margin: 16px 0;
+    }
+    @include laptop_l{
+        margin: 20px 0;
+    }
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+
+        &-bar-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 64px;
+            background-color: $light_grey;
+            border-radius: 32px;
+            overflow: hidden;
+            @include mobile_s{
+                display: none;
+            }
+            @include mobile_m_l{
+                display: none;
+            }
+            @include tablet_s{
+                display: none;
+            }
+            @include tablet_l{
+                display: none;
+            }
+            @include laptop_m{
+                padding: 32px;
+            }
+            @include laptop_l{
+                padding: 32px;
+            }
+
+            &-links {
+                display: flex;
+                font-family: $Roboto_Font;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: $line_height150;
+                color: $font_blue;
+                z-index: 999;
+
+                &-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 32px;
+                    list-style-type: none;
+                    li{
+                        padding: 10px;
+                        a{
+                            text-decoration: none;
+                            color: $font_blue;
+                            transition: background-color 0.5s, color 0.5s;
+                        }
+                    }
+
+                }
+
+                &-wrapper li:hover{
+                    background-color: $font_hero_btn;
+                    color: $white;
+                    cursor: pointer;
+                    border-radius: 24px;
+                    a{
+                        color: $white;
+                    }
+                }
+
+            }
+
+            &-vector{
+                @include laptop_m{
+                    display: none;
+                }
+                @include laptop_l{
+                    display: none;
+                }
+                position: absolute;
+                overflow: hidden;
+                right: 280px;
+                img{
+                    position: relative;
+                    overflow: hidden;
+                }
+            }
+        }
+
+
+        &-bar-2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 21px 64px;
+            background-color: $light_grey;
+            border-radius: 16px;
+            @include mobile_s{
+                padding: 15px 16px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            @include mobile_m_l{
+                padding: 15px 16px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            @include tablet_s{
+                padding: 15px 16px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            @include tablet_l{
+                padding: 15px 16px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            @include laptop_m{
+                padding: 15px 16px;
+                gap: 10px;
+            }
+            @include laptop_l{
+                padding: 15px 16px;
+                gap: 10px;
+            }
+
+            &-logo{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                justify-items: left;
+                gap: 16px;
+            }
+
+            &-text{
+                font-family: $Inter_Font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: $line_height150;
+                color: $light_blue;
+                @include mobile_s{
+                    font-size: 14px;
+                    text-align: center;
+                }
+                @include mobile_m_l{
+                    font-size: 16px;
+                    text-align: center;
+                }
+                @include tablet_s{
+                    font-size: 16px;
+                    text-align: center;
+                }
+                @include tablet_l{
+                    font-size: 16px;
+                    text-align: center;
+                }
+                @include laptop_m{
+                    font-size: 16px;
+                    text-align: center;
+                }
+                @include laptop_l{
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+
+            &-btn{
+                
+                button{
+                    padding: 8px 30px;
+                    border-radius: 60px;
+                    border: 1px solid #3089AB;
+                    background-color: $light_grey;
+                    color: $dark_blue;
+                    transition: transform 0.3s ease;
+                    @include mobile_s{
+                        padding: 4px 15px;
+                    }
+                    @include mobile_m_l{
+                        padding: 4px 15px;
+                    }
+                    @include tablet_s{
+                        padding: 5px 17px;
+                    }
+                    @include tablet_l{
+                        padding: 5px 17px;
+                    }
+                    @include laptop_m{
+                        padding: 6px 19px;
+                    }
+                    @include laptop_l{
+                        padding: 6px 19px;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: $dark_blue;
+                    }
+                }
+                button:hover{
+                    background-color: $font_hero_btn;
+                    color: $white;
+                    transform: $translateY;
+                    box-shadow: $box-shadow;
+                    a{
+                        color: $white;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
